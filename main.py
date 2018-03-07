@@ -17,7 +17,7 @@ scr = py.display.set_mode(scr_size, 0, 32)
 
 # # the test mario image
 mario_jump_path = "resources/graphics/mariojump2.gif"
-mario_jump = py.image.load(mario_jump_path).convert_alpha()
+mario_jump_image = py.image.load(mario_jump_path).convert_alpha()
 
 
 def main():
@@ -27,7 +27,7 @@ def main():
             if event.type == QUIT:
                 quit(1)
 
-        scr.blit(mario_jump, (0, 0))
+        scr.blit(mario_jump_image, (0, 0))
         py.display.update()
     pass
 
